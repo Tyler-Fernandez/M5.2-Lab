@@ -27,3 +27,11 @@ To run the tests for the project, run the following command:
 ```bash
 npm test
 ```
+
+## Accessibility Lab Answers
+
+User can't jump between headings on the beginning variation of the website.
+
+The <div class="nav"></div> can just be changed to <nav>
+
+Other improvements to make the website more accessible include using media queries and adding client-side validation to the comment form.
