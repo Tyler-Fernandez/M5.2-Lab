@@ -28,10 +28,33 @@ To run the tests for the project, run the following command:
 npm test
 ```
 
-## Accessibility Lab Answers
+# Accessibility Lab Answers
 
-User can't jump between headings on the beginning variation of the website.
+## Color
+When put into WebAIM's color contrast checker, the current color scheme fails for normal text and only passes 1 text for large text.
 
-The <div class="nav"></div> can just be changed to <nav>
+## Semantic HTML
+When using a screenreader, you can't jump between headings and it's hard to tell where headings and paragraphs start and end. To make the article text easier for screenreader users to navigate, br tags need to be removed, font tags replaced with heading elements, and paragraphs wrapped with p. The navigation part of the site can be wrapped with the nav tag.
 
-Other improvements to make the website more accessible include using media queries and adding client-side validation to the comment form.
+## The images
+
+Fixed by using aria-labelledby.
+
+## The audio player
+A link to a separate file is added for hearing impaired people and to make the audio accessible to older browsers.
+## The forms
+
+To add a label accessible to only screenreaders, add a label to aria-label on the input element. To make the label texts associated with their labels, the label text needs to be wrapped with label elements with for attributes containing hte ID values of the input elements.
+</dl>
+
+## The show/hide comment control
+
+Can be fixed by changing the div to a button element.
+
+## The table
+
+The table is now within a summary attribute, each cell in the first row and column uses th, and the scope for rows in the first column is scope="row" and the scope for columns in the first row is scope="col".
+
+
+## Other considerations
+To make the site more accessible, adding media queries would make it more accessible on mobile devices. Additionally, client-side validation could be added to the comment form.
